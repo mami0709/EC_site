@@ -13,20 +13,15 @@ const Test: NextPage = () => {
 	const { id } = router.query;
   const taskList:any = useSelector<ProductState>((state:any) => state.products.value);
 
-	const result = taskList.filter(function(value: any) {
-		return value == id ;
-	})
 
-	
-	console.log(id)
-	console.log(result)
-	// console.log(taskList)
+	const result = taskList.find((task: any) => {
+    return String(task.id) == id;
+	})
 
 	return (
 		<div>
 			<h1>Hello</h1>
-			{id}
-			{result.title}
+			{result?.title}
 			{result?.price}
 		</div>
 	)
