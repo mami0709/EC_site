@@ -41,33 +41,37 @@ const Test: NextPage = () => {
       <Center paddingTop={"100px"}  width="80%" margin= "0px auto">
 				<Box display={"flex"}>
 					{/* eslint-disable-next-line jsx-a11y/alt-text */}
-					<Image src={`../${result?.image}`} boxSize='300px' objectFit='cover' />
-					<Box>
-						<Text fontSize='4xl' fontFamily="HiraMinProN-W3">{result?.title}</Text>
-						<Text fontSize='3xl' fontFamily="HiraMinProN-W3">¥{result?.price}</Text>
+					<Image src={`../${result?.image}`} boxSize='600px' objectFit='cover' />
+					<Box marginLeft={20}>
+						<Text fontSize='5xl' fontFamily="HiraMinProN-W3" color={"blue.400"} marginBottom={5}>
+							{result?.title}
+						</Text>
+						<Text fontSize='4xl' fontFamily="HiraMinProN-W3" marginBottom={5}>
+							¥{result?.price}
+						</Text>
 
 						<TableContainer>
-							<Table>
+							<Table marginBottom={10}>
 								<Tbody>
 									<Tr>
-										<Th>{result?.color1}</Th>
-										<Th>残10点</Th>
-										<Th><Button onClick={() => handleClick()}><AiOutlineShoppingCart /></Button></Th>
+										<Th fontSize='2xl'>{result?.color1}</Th>
+										<Th fontSize='2xl'>残10点</Th>
+										<Th><Button onClick={() => handleClick()} size='lg'><AiOutlineShoppingCart /></Button></Th>
 									</Tr>
 									<Tr>
-										<Th>{result?.color2}</Th>
-										<Th>残8点</Th>
-										<Th><Button onClick={() => handleClick()}><AiOutlineShoppingCart /></Button></Th>
+										<Th fontSize='2xl'>{result?.color2}</Th>
+										<Th fontSize='2xl'>残8点</Th>
+										<Th><Button onClick={() => handleClick()} size='lg'><AiOutlineShoppingCart /></Button></Th>
 									</Tr>
 									<Tr>
-										<Th>{result?.color3}</Th>
-										<Th>残5点</Th>
-										<Th><Button onClick={() => handleClick()}><AiOutlineShoppingCart /></Button></Th>
+										<Th fontSize='2xl'>{result?.color3}</Th>
+										<Th fontSize='2xl'>残5点</Th>
+										<Th><Button onClick={() => handleClick()} size='lg'><AiOutlineShoppingCart /></Button></Th>
 									</Tr>
 								</Tbody>
 							</Table>
 						</TableContainer>
-						<Text fontSize='1xl' fontFamily="HiraMinProN-W3">¥{result?.message}</Text>
+						<Text fontSize='2xl' fontFamily="HiraMinProN-W3" >{result?.message}</Text>
 					</Box>
 
 
