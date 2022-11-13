@@ -29,7 +29,7 @@ const Test: NextPage = () => {
     dispatch(
       addCart({
         id: taskList.length + 1,
-				// title: title
+				title: title
       })
     );
 	};
