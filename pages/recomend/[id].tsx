@@ -6,20 +6,34 @@ import { useSelector, useDispatch } from "react-redux";
 import { setProducts, ProductState } from "../../redux/slice/products";
 import { useState } from "react";
 import { Tab } from "../../layout/Tab"
-import { Box, Text, Image, Center, SimpleGrid, GridItem,LinkBox, LinkOverlay, Heading ,Grid, TableContainer, Table , Tr, Th, Thead, Tbody,   } from '@chakra-ui/react'
+import { Box, Text, Image, Center, SimpleGrid, GridItem,LinkBox, LinkOverlay, Heading ,Button, TableContainer, Table , Tr, Th, Thead, Tbody,   } from '@chakra-ui/react'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
+import { addCart, deleteCart } from '../../redux/slice/cart'
+import { title } from 'process';
 
 
 
 const Test: NextPage = () => {
 	const router = useRouter();
 	const { id } = router.query;
+	const dispatch = useDispatch();
   const taskList:any = useSelector<ProductState>((state:any) => state.products.value);
 
 	//queryで取得したIDをもとにtaskListから呼び出し。resultに格納
 	const result = taskList.find((task: any) => {
     return String(task.id) == id;
 	})
+
+	// TODO: handleClickがエラーになってるから直す。
+	const handleClick = () => {
+    dispatch(
+      addCart({
+        id: taskList.length + 1,
+				// title: title
+      })
+    );
+	};
+
 
 	return (
 		<div>
@@ -38,17 +52,17 @@ const Test: NextPage = () => {
 									<Tr>
 										<Th>{result?.color1}</Th>
 										<Th>残10点</Th>
-										<Th><AiOutlineShoppingCart /></Th>
+										<Th><Button onClick={() => handleClick()}><AiOutlineShoppingCart /></Button></Th>
 									</Tr>
 									<Tr>
 										<Th>{result?.color2}</Th>
 										<Th>残8点</Th>
-										<Th><AiOutlineShoppingCart /></Th>
+										<Th><Button onClick={() => handleClick()}><AiOutlineShoppingCart /></Button></Th>
 									</Tr>
 									<Tr>
 										<Th>{result?.color3}</Th>
 										<Th>残5点</Th>
-										<Th><AiOutlineShoppingCart /></Th>
+										<Th><Button onClick={() => handleClick()}><AiOutlineShoppingCart /></Button></Th>
 									</Tr>
 								</Tbody>
 							</Table>
