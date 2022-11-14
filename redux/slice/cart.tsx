@@ -12,14 +12,13 @@ export interface CartState {
 
 export const CartSlice = createSlice({
 	name: "cart",
-	initialState: [],
+	initialState: {value: []},
 	reducers: {
 		addCart: (state,action) => {
-			{/* @ts-ignore としましょう */}
-			state.value.push(action.payload); //payload=データ 
+			state.value.push(action.payload);
+			// debugger;  
 		},
 		deleteCart: (state,action) => {
-			{/* @ts-ignore としましょう */}
 			state.value = state.value.filter((cart) => cart.id !== action.payload.id);
 		},
 	},

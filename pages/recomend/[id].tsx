@@ -8,7 +8,7 @@ import { useState } from "react";
 import { Tab } from "../../layout/Tab"
 import { Box, Text, Image, Center, SimpleGrid, GridItem,LinkBox, LinkOverlay, Heading ,Button, TableContainer, Table , Tr, Th, Thead, Tbody,   } from '@chakra-ui/react'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
-import { addCart, deleteCart } from '../../redux/slice/cart'
+import cart, { addCart, deleteCart } from '../../redux/slice/cart'
 import { title } from 'process';
 
 
@@ -28,8 +28,8 @@ const Test: NextPage = () => {
 	const handleClick = () => {
     dispatch(
       addCart({
-        id: taskList.length + 1,
-				title: title
+        // id: taskList.length + 1,
+				result
       })
     );
 	};
