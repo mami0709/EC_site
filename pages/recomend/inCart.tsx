@@ -21,14 +21,19 @@ const inCart:NextPage = () => {
       <Tab />
       <Center paddingTop={"100px"}  width="100%">
 				<Text fontSize='5xl' fontFamily="HiraMinProN-W3" color={"blue.400"}>カートの中身</Text>
-				{cartList.map((cart:any) => (
-				<Box key={cart.id}>
-					<Text>{cart.result?.title}</Text>
-					<Text>{cart.result?.price}</Text>
+				<Box>
+				{/* {cartList.map((result:any) => (
+					// eslint-disable-next-line react/jsx-key
+					<Text>{result?.title}</Text>
+					))} */}
+					{/* @ts-nocheck */}
 					
-				</Box>
-					))}
 
+					{/* TODO: カートの中身情報追加 */}
+					{cartList?.result?.title}
+					{cartList?.title}
+					{cartList?.cart?.title}
+				</Box>
 			</Center>
 
 		</>
