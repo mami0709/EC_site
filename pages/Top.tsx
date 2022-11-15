@@ -19,9 +19,8 @@ const Top: NextPage = () => {
       <Tab />
       
       <Center paddingTop={"100px"}  width="100%">
-          {taskList.map((product:any) => (
-            // eslint-disable-next-line react/jsx-key
-            <Box >
+          {taskList.map((product:any, index) => (
+            <Box key={index}>
             <Grid templateColumns='repeat(1, 1fr )' gap={4} >
               <GridItem w='100%' h='10'>
                 <Link href={`/recomend/${product.id}`} >
