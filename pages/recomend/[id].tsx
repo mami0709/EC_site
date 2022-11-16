@@ -38,7 +38,7 @@ const Test: NextPage = () => {
 	return (
 		<div>
       <Tab />
-      <Center paddingTop={"100px"}  width="80%" margin= "0px auto">
+      <Center paddingTop={"120px"}  width="80%" margin= "0px auto">
 				<Box display={"flex"}>
 					{/* eslint-disable-next-line jsx-a11y/alt-text */}
 					<Image src={`../${result?.image}`} boxSize='600px' objectFit='cover' />

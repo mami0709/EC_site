@@ -10,14 +10,14 @@ export function Tab() {
   return (
     <>
       <div>
-        <div style={{
+        <Box style={{
           background: "#fff",
           display: "flex",
           padding: "20px 20px",
           position: "fixed",
           justifyContent: "space-between",
           width: "100%",
-        }}>
+        }} boxShadow='lg'>
           <Link href='/'> 
             <Text fontSize='4xl' fontFamily="HiraMinProN-W3">リュック専門店</Text>
           </Link>
@@ -31,7 +31,7 @@ export function Tab() {
 
           <HamburgerMenu />
           
-        </div>
+        </Box>
       </div>
     </>
   );
