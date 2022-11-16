@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState ,useEffect } from 'react'
 import {NextPage} from "next";
 import { Tab } from "../../layout/Tab"
 import { Box, Text, Image, Center, SimpleGrid, GridItem,LinkBox, LinkOverlay, Heading ,Grid,   } from '@chakra-ui/react'
@@ -11,6 +11,7 @@ import { useRouter } from 'next/router';
 const inCart:NextPage = () => {
 
   const cartList:any = useSelector<CartState>((state:any) => state.cart.value);
+	// eslint-disable-next-line react-hooks/rules-of-hooks
 
 
 	return (
