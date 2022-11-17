@@ -1,5 +1,5 @@
 
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 import { Type } from "typescript";
 import { ProductsData } from "../../definitions/productData";
 
@@ -19,7 +19,10 @@ export const CartSlice = createSlice({
 			// debugger;  
 		},
 		deleteCart: (state,action) => {
+			// debugger;
+			// console.log('before', current(state))  //この時点のStateの中身を見たい場合はcurrentを使う。
 			state.value = state.value.filter((cart) => cart.id !== action.payload.id);
+			// console.log('after', current(state))
 		},
 	},
 });
