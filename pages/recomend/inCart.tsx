@@ -9,6 +9,7 @@ import { DeleteIcon } from '@chakra-ui/icons'
 
 
 
+
 const inCart:NextPage = () => {
 	const dispatch = useDispatch();
   const cartList:any = useSelector<CartState>((state:any) => state.cart.value);
