@@ -27,10 +27,7 @@ const Test: NextPage = () => {
 	// TODO: handleClickがエラーになってるから直す。
 	const handleClick = () => {
     dispatch(
-      addCart({
-        // id: taskList.length + 1,
-				result
-      })
+      addCart(result)
     );
 	};
 
