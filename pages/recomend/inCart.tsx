@@ -10,7 +10,7 @@ import { DeleteIcon } from '@chakra-ui/icons'
 
 
 const inCart:NextPage = () => {
-
+	const dispatch = useDispatch();
   const cartList:any = useSelector<CartState>((state:any) => state.cart.value);
 
 
@@ -22,18 +22,19 @@ const inCart:NextPage = () => {
 			<Text fontSize='5xl' color={"blue.400"} textAlign={"center"}>カートの中身</Text>
 					{cartList.map((cart: any, index: React.Key ) => (
 						// TODO: ゴミ箱ボタンの背景がついていない箇所修正。
-						<Box key={index} display={"flex"} bg='#BEE3F8' w='80%' padding={"20px 20px 20px 20px"} marginTop={10}>
+						<Box key={index} display={"flex"} bg='white' padding={"20px 20px 20px 20px"} marginTop={10}  borderWidth='1px' borderRadius='lg' boxShadow='base'>
 							{/* eslint-disable-next-line jsx-a11y/alt-text */}
-							<Image src={`../${cart.result?.image}`} boxSize='200px' objectFit='cover' />
+							<Image src={`../${cart.image}`} boxSize='200px' objectFit='cover' />
 							<Box>
-								<Text fontSize='4xl' padding={"30px 300px 10px 70px"} >
-									{cart.result?.title}
+								<Text fontSize='4xl' padding={"30px 400px 10px 70px"} >
+									{cart.title}
 								</Text>
-								<Text fontSize='3xl' padding={"10px 300px 10px 70px"}>
-									¥{cart.result?.price}
+								<Text fontSize='3xl' padding={"10px 400px 10px 70px"}>
+									¥{cart.price}
 								</Text>
 							</Box>
-							<Button marginTop={20} size='lg'>
+							<Button marginTop={20} size='lg'
+								onClick={() => dispatch(deleteCart({ id: cart.id }))}>
 								<DeleteIcon />
 							</Button>
 						</Box>
