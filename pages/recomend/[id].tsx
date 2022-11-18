@@ -1,30 +1,26 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import {NextPage} from "next";
 import { useRouter } from 'next/router';
 import {  ProductsData } from "../../definitions/productData"
-import { useSelector, useDispatch } from "react-redux";
-import { setProducts, ProductState } from "../../redux/slice/products";
-import { useState } from "react";
+import { useDispatch } from "react-redux";
 import { Tab } from "../../layout/Tab"
-import { Box, Text, Image, Center, SimpleGrid, GridItem,LinkBox, LinkOverlay, Heading ,Button, TableContainer, Table , Tr, Th, Thead, Tbody,   } from '@chakra-ui/react'
+import { Box, Text, Image, Center, Button, TableContainer, Table , Tr, Th, Tbody,   } from '@chakra-ui/react'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
-import cart, { addCart, deleteCart } from '../../redux/slice/cart'
-import { title } from 'process';
-
+import { addCart } from '../../redux/slice/cart'
 
 
 const Test: NextPage = () => {
 	const router = useRouter();
 	const { id } = router.query;
 	const dispatch = useDispatch();
-  const taskList:any = useSelector<ProductState>((state:any) => state.products.value);
+  const taskList:any = ProductsData;
 
 	//queryで取得したIDをもとにtaskListから呼び出し。resultに格納
 	const result = taskList.find((task: any) => {
     return String(task.id) == id;
 	})
 
-	// TODO: handleClickがエラーになってるから直す。
+	//商品情報(result)をpush
 	const handleClick = () => {
     dispatch(
       addCart(result)

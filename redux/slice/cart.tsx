@@ -1,7 +1,5 @@
 
-import { createSlice, current } from "@reduxjs/toolkit";
-import { Type } from "typescript";
-import { ProductsData } from "../../definitions/productData";
+import { createSlice } from "@reduxjs/toolkit";
 
 export interface CartState {
 	id: number;
