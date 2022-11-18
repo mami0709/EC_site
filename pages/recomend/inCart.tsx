@@ -56,7 +56,9 @@ const inCart:NextPage = () => {
 										<Text fontSize='3xl' >合計金額</Text>
 										<Text fontSize='4xl' fontWeight={"bold"}>{total} 円</Text>
 									</Box>
+									<Link href='/recomend/end' >
 										<Button margin={"0px auto"} size='lg' marginLeft={5} marginTop={5} colorScheme='orange'>注文を確定する</Button>
+									</Link>
 								</Box>
 
 								<Box display={"flex"} flexFlow={"column"} marginBottom={100}>
