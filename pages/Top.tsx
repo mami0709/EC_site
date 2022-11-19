@@ -13,10 +13,10 @@ const Top: NextPage = () => {
     <>
       <Tab />
       
-      <Center paddingTop={"120px"}  width="90%" margin={"0px auto"}>
+      <Center paddingTop={"130px"}  width="90%" margin={"0px auto"}>
       <Grid templateColumns='repeat(5, 1fr )' gap={8} >
           {taskList.map((product:any, index: React.Key) => (
-            <Box key={index}>
+            <Box key={index} paddingTop={"30px"} paddingBottom={"50px"}>
                 <GridItem>
                   <Link href={`/recomend/${product.id}`} >
                       <Box >  

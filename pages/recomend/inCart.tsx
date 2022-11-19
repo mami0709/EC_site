@@ -49,26 +49,26 @@ const inCart:NextPage = () => {
 							<Box>
 								<Text fontSize='5xl' color={"blue.400"} textAlign={"center"}>カートの中身</Text>
 
-								<Box  margin={"0px auto"} display={"flex"} paddingTop={10}>
-									<Box margin={"0px auto"} paddingRight={5}>
+								<Center display={"flex"} paddingTop={10}>
+									<Box paddingRight={5}>
 										<Text fontSize='3xl' >合計金額</Text>
 										<Text fontSize='4xl' fontWeight={"bold"}>{total} 円</Text>
 									</Box>
 									<Link href='/recomend/end' >
-										<Button margin={"0px auto"} size='lg' marginLeft={5} marginTop={5} colorScheme='orange'>注文を確定する</Button>
+										<Button size='lg' marginLeft={5} marginTop={5} colorScheme='orange'>注文を確定する</Button>
 									</Link>
-								</Box>
+								</Center>
 
-								<Box display={"flex"} flexFlow={"column"} marginBottom={100}>
+								<Box display={"flex"} flexFlow={"column"} marginBottom={"100px"} width="80%" margin={"0px auto"}>
 										{cartList.map((cart: any, index: React.Key ) => (
 											<Box key={index} display={"flex"} bg='white' padding={"20px 20px 20px 20px"} marginTop={10}  borderWidth='1px' borderRadius='lg' boxShadow='base'>
 												{/* eslint-disable-next-line jsx-a11y/alt-text */}
 												<Image src={`../${cart.image}`} boxSize='200px' objectFit='cover' />
 												<Box>
-													<Text fontSize='4xl' padding={"30px 400px 10px 70px"} >
+													<Text fontSize='4xl' padding={"30px 100px 10px 70px"} >
 														{cart.title}
 													</Text>
-													<Text fontSize='3xl' padding={"10px 400px 10px 70px"}>
+													<Text fontSize='3xl' padding={"10px 100px 10px 70px"}>
 														¥{cart.price}
 													</Text>
 												</Box>
