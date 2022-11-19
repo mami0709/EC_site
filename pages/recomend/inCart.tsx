@@ -1,10 +1,9 @@
-import React, { useState ,useEffect } from 'react'
+import React from 'react'
 import {NextPage} from "next";
 import { Tab } from "../../layout/Tab"
-import { Box, Text, Image, Center, SimpleGrid, GridItem,LinkBox, LinkOverlay, Heading ,Grid,Button, TableContainer, Table , Tr, Th, Thead, Tbody,    } from '@chakra-ui/react'
+import { Box, Text, Image, Center, Button,    } from '@chakra-ui/react'
 import { useSelector, useDispatch } from "react-redux";
-import cart, { CartState,addCart, deleteCart } from "../../redux/slice/cart";
-import { useRouter } from 'next/router';
+import { CartState,deleteCart } from "../../redux/slice/cart";
 import { DeleteIcon } from '@chakra-ui/icons'
 import Link from "next/link";
 

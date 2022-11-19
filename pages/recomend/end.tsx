@@ -4,7 +4,7 @@ import { Tab } from "../../layout/Tab"
 import { Box, Text, Center, Button,    } from '@chakra-ui/react'
 import Link from "next/link";
 import { useSelector, useDispatch } from "react-redux";
-import cart, { CartState,clearCart } from "../../redux/slice/cart";
+import { CartState,clearCart } from "../../redux/slice/cart";
 
 
 
