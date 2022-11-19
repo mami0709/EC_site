@@ -8,6 +8,8 @@ export interface CartState {
 	push: boolean;
 }
 
+
+
 export const CartSlice = createSlice({
 	name: "cart",
 	initialState: {value: []},
@@ -22,8 +24,11 @@ export const CartSlice = createSlice({
 			state.value = state.value.filter((cart) => cart.id !== action.payload.id);
 			// console.log('after', current(state))
 		},
+		clearCart: (state) => {
+			return {value: []};
+		}
 	},
 });
 
-export const { addCart, deleteCart } = CartSlice.actions;
+export const { addCart, deleteCart, clearCart } = CartSlice.actions;
 export default CartSlice.reducer;
