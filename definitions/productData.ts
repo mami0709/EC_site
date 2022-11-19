@@ -1,6 +1,7 @@
 export const ProductsData = [
   {
     id: 1,
+    tag: "リュック",
     title: "BIND UP BACKPACK BLACK EDITION/ バックパック リュック",
     price: 25000,
     image: "./images/01.jpeg",
@@ -11,6 +12,7 @@ export const ProductsData = [
   },
   {
     id: 2,
+    tag: "リュック",
     title: "DOUBLE BELT ZONE MIX DAYPACK BLACK EDITION/ デイパック/リュック",
     price: 18000,
     image: "./images/02.jpeg",
@@ -21,6 +23,7 @@ export const ProductsData = [
   },
   {
     id: 3,
+    tag: "リュック",
     title: "DOUBLE LINE BACKPACK BLACK EDITION / バックパック/リュック",
     price: 22000,
     image: "./images/03.jpeg",
@@ -31,6 +34,7 @@ export const ProductsData = [
   },
   {
     id: 4,
+    tag: "リュック",
     title: "【WEB限定】TIMÓN BACKPACK BLACK EDITION / バックパック/リュック",
     price: 27000,
     image: "./images/04.jpeg",
@@ -41,6 +45,7 @@ export const ProductsData = [
   },
   {
     id: 5,
+    tag: "リュック",
     title: "RECTANGLE DAYPACK / レクタングル デイパック/リュック",
     price: 18000,
     image: "./images/05.jpeg",
@@ -51,6 +56,7 @@ export const ProductsData = [
   },
   {
     id: 6,
+    tag: "リュック",
     title: "【予約】DOUBLE BELT PMD MIX DAYPACK / デイパック/リュック",
     price: 16000,
     image: "./images/06.jpeg",
@@ -61,6 +67,7 @@ export const ProductsData = [
   },
   {
     id: 7,
+    tag: "リュック",
     title: "【予約】DOUBLE BELT PMD MIX DAYPACK / デイパック/リュック",
     price: 19000,
     image: "./images/07.jpeg",
@@ -71,6 +78,7 @@ export const ProductsData = [
   },
   {
     id: 8,
+    tag: "リュック",
     title: "SUPERIORITY BIND UP 2 BACKPACK / バックパック/リュック",
     price: 23000,
     image: "./images/08.jpeg",
@@ -81,6 +89,7 @@ export const ProductsData = [
   },
   {
     id: 9,
+    tag: "バック",
     title: "TRUCKS GARAGE BODY BAG/ ボディバック",
     price: 11000,
     image: "./images/09.jpeg",
@@ -91,6 +100,7 @@ export const ProductsData = [
   },
   {
     id: 10,
+    tag: "リュック",
     title: "TRUCKS GARAGE DAYPACK/ デイパック/リュック",
     price: 16000,
     image: "./images/10.jpeg",
@@ -101,6 +111,7 @@ export const ProductsData = [
   },
   {
     id: 11,
+    tag: "バック",
     title: "TRUCKS GARAGE MESSENGER BAG /メッセンジャーバック",
     price: 13000,
     image: "./images/11.jpeg",
@@ -111,6 +122,7 @@ export const ProductsData = [
   },
   {
     id: 12,
+    tag: "サイフ",
     title: "MAKAVELIC NECKSTRAP WALLET/ウォレット/財布",
     price: 9000,
     image: "./images/12.jpeg",
@@ -121,6 +133,7 @@ export const ProductsData = [
   },
   {
     id: 13,
+    tag: "バック",
     title: "FLIGHT SHOLDER BAG/ フライト ショルダーバック",
     price: 12000,
     image: "./images/13.jpeg",
@@ -131,6 +144,7 @@ export const ProductsData = [
   },
   {
     id: 14,
+    tag: "バック",
     title: "X-DESIGN SHOULDER BAG",
     price: 15000,
     image: "./images/14.jpeg",
@@ -141,6 +155,7 @@ export const ProductsData = [
   },
   {
     id: 15,
+    tag: "バック",
     title: "FLIGHT TOTE BAG/ フライトトートバック",
     price: 16000,
     image: "./images/15.jpeg",
