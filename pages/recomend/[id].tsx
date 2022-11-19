@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{ useState } from 'react'
 import {NextPage} from "next";
 import { useRouter } from 'next/router';
 import {  ProductsData } from "../../definitions/productData"
@@ -19,12 +19,13 @@ const Test: NextPage = () => {
 	const result = taskList.find((task: any) => {
     return String(task.id) == id;
 	})
-
+	const [count, setCount] = useState(10);
 	//商品情報(result)をpush
 	const handleClick = () => {
     dispatch(
       addCart(result)
     );
+		setCount(count - 1)
 	};
 
 
@@ -48,17 +49,17 @@ const Test: NextPage = () => {
 								<Tbody>
 									<Tr>
 										<Th fontSize='2xl'>{result?.color1}</Th>
-										<Th fontSize='2xl'>残10点</Th>
+										<Th fontSize='2xl'>残{count}点</Th>
 										<Th><Button onClick={() => handleClick()} size='lg'><AiOutlineShoppingCart /></Button></Th>
 									</Tr>
 									<Tr>
 										<Th fontSize='2xl'>{result?.color2}</Th>
-										<Th fontSize='2xl'>残8点</Th>
+										<Th fontSize='2xl'>残{count}点</Th>
 										<Th><Button onClick={() => handleClick()} size='lg'><AiOutlineShoppingCart /></Button></Th>
 									</Tr>
 									<Tr>
 										<Th fontSize='2xl'>{result?.color3}</Th>
-										<Th fontSize='2xl'>残5点</Th>
+										<Th fontSize='2xl'>残{count}点</Th>
 										<Th><Button onClick={() => handleClick()} size='lg'><AiOutlineShoppingCart /></Button></Th>
 									</Tr>
 								</Tbody>
