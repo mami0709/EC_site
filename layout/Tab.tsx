@@ -1,6 +1,5 @@
-import { ReactNode } from 'react'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
-import { Box, Text, Image, Icon, Button, } from '@chakra-ui/react'
+import { Box, Text, Icon, } from '@chakra-ui/react'
 import  HamburgerMenu  from "./hamburgerMenu"
 import React from 'react';
 import Link from "next/link";
