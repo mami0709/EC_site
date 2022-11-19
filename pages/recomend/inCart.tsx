@@ -20,8 +20,6 @@ const inCart:NextPage = () => {
 	//カート内が０か確認
 	const noCart = total === 0 ;
 
-	//注文確定押下で「ご注文ありがとうございました」の画面仕込む
-
 
 
 
