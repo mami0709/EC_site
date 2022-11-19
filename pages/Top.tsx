@@ -13,23 +13,24 @@ const Top: NextPage = () => {
     <>
       <Tab />
       
-      <Center paddingTop={"120px"}  width="100%">
+      <Center paddingTop={"120px"}  width="90%" margin={"0px auto"}>
+      <Grid templateColumns='repeat(5, 1fr )' gap={8} >
           {taskList.map((product:any, index: React.Key) => (
             <Box key={index}>
-            <Grid templateColumns='repeat(1, 1fr )' gap={4} >
-              <GridItem w='100%' h='10'>
-                <Link href={`/recomend/${product.id}`} >
-                    <Box >  
-                      {/* eslint-disable-next-line jsx-a11y/alt-text */}
-                      <Image src={product.image} boxSize='300px' objectFit='cover' />
-                        <Heading size='md' my='2'>{product.title}</Heading>
-                        <Text>{product.price}</Text>
-                    </Box>
-                </Link>
-              </GridItem>
-            </Grid> 
+                <GridItem>
+                  <Link href={`/recomend/${product.id}`} >
+                      <Box >  
+                        {/* eslint-disable-next-line jsx-a11y/alt-text */}
+                        <Image src={product.image} boxSize='300px' objectFit='cover' />
+                          <Heading size='md' my='2'>{product.title}</Heading>
+                          <Text>¥{product.price}</Text>
+                      </Box>
+                  </Link>
+                </GridItem>
           </Box>
           ))}
+              </Grid> 
+
         </Center>
         
       
