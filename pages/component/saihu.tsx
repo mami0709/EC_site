@@ -6,11 +6,11 @@ import { Tab } from "../../layout/Tab"
 import type { NextPage } from 'next';
 
 
-const Bag: NextPage = () => {
+const Saihu: NextPage = () => {
   const taskList:any = ProductsData;
 	//tagより任意のものを取り出す
 	const taskListRyukku = taskList.filter((task: any) => {
-		return task.tag == "バック"
+		return task.tag == "サイフ"
 	})
 
   return (
@@ -22,7 +22,7 @@ const Bag: NextPage = () => {
           {taskListRyukku.map((product:any, index: React.Key) => (
             <Box key={index} paddingTop={"30px"} paddingBottom={"50px"}>
                 <GridItem>
-                  <Link href={`/recomend/${product.id}`} >
+                  <Link href={`/component/${product.id}`} >
                       <Box >  
                         {/* eslint-disable-next-line jsx-a11y/alt-text */}
                         <Image src={`../${product.image}`} boxSize='300px' objectFit='cover' />
@@ -42,4 +42,4 @@ const Bag: NextPage = () => {
   );
 }
 
-export default Bag;
+export default Saihu;

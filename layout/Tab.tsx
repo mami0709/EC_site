@@ -21,7 +21,7 @@ export function Tab() {
             <Text fontSize='4xl' fontFamily="HiraMinProN-W3">リュック専門店</Text>
           </Link>
           <Box marginRight={0} marginLeft={'auto'} marginTop={2} >
-            <Link href='/recomend/inCart' >
+            <Link href='/component/inCart' >
               <Icon w={10} h={10} >
                 <AiOutlineShoppingCart />
               </Icon>
