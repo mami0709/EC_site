@@ -1,6 +1,6 @@
 import React from 'react';
 import Top from './Top'
-import Login from './recomend/login';
+import Login from './component/login';
 
 function Home() {
 

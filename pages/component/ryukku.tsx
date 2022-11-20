@@ -22,7 +22,7 @@ const Ryukku: NextPage = () => {
           {taskListRyukku.map((product:any, index: React.Key) => (
             <Box key={index} paddingTop={"30px"} paddingBottom={"50px"}>
                 <GridItem>
-                  <Link href={`/recomend/${product.id}`} >
+                  <Link href={`/component/${product.id}`} >
                       <Box >  
                         {/* eslint-disable-next-line jsx-a11y/alt-text */}
                         <Image src={`../${product.image}`} boxSize='300px' objectFit='cover' />
