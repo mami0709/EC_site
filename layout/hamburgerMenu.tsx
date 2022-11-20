@@ -13,7 +13,7 @@ import {
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
 import Link from "next/link";
-import { auth, provider } from "../firebase";
+import { auth } from "../firebase";
 
 
 
