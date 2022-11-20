@@ -4,6 +4,9 @@ https://makavelic-store.com/
 このくらいシンプルでもいいかも
 https://github.com/ken2122/ec-site-demo
 
+11/4開始
+11/20ひとまず完成
+
 TODO: 
 　✔️①商品画像の追加 
 　✔️②まず大枠の表示整える。カートとか。ブランド名とか。

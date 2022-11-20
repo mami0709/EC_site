@@ -1,6 +1,5 @@
 import React from 'react'
-import Link from "next/link";
-import { Box, Text, Image, Center, GridItem,Heading ,Grid, Button,  } from '@chakra-ui/react'
+import { Box, Text, Center, Button,  } from '@chakra-ui/react'
 import { signInWithPopup } from "firebase/auth";
 import { auth, provider } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth"
