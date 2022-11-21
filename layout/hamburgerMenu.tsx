@@ -9,13 +9,25 @@ import {
 	Button,
 	useDisclosure,
   Icon,
+  Text,
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
+import Link from "next/link";
+import { auth } from "../firebase";
+
 
 
 function HamburgerMenu () {
   const { isOpen, onOpen, onClose } = useDisclosure()
-  // const [placement, setPlacement] = React.useState('right')
+
+  //サインアウトボタン
+function SignOutButton () {
+	return (
+		<Button colorScheme='teal' variant='link' fontSize='2xl' onClick={() => auth.signOut()}>
+			<Text>サインアウト</Text>
+		</Button>
+	)
+}
 
   return (
     <>
@@ -25,13 +37,24 @@ function HamburgerMenu () {
       <Drawer onClose={onClose} isOpen={isOpen}>
         <DrawerOverlay />
         <DrawerContent>
-          <DrawerHeader borderBottomWidth='1px'>リュック専門店</DrawerHeader>
-          <DrawerBody>
-            <p>ログアウト</p>
-            <p>すべて</p>
-            <p>メンズ</p>
-            <p>レディース</p>
-            <p>キッズ</p>
+          <DrawerHeader borderBottomWidth='1px' fontSize='3xl'>リュック専門店</DrawerHeader>
+          <DrawerCloseButton />
+          <DrawerBody display={"flex"} flexFlow={"column"}>
+            <Link href={'/'}>
+              <SignOutButton  marginTop={5}>ログアウト</SignOutButton>
+            </Link>
+            <Link href={'/'}>
+              <Button colorScheme='teal' variant='link'  fontSize='2xl' marginTop={5}>すべて</Button>
+            </Link>
+            <Link href={'/component/ryukku'}>
+              <Button colorScheme='teal' variant='link' fontSize='2xl' marginTop={5}>リュック</Button>
+            </Link>
+            <Link href={'/component/bag'}>
+              <Button colorScheme='teal' variant='link' fontSize='2xl' marginTop={5}>バック</Button>
+            </Link>
+            <Link href={'/component/saihu'}>
+              <Button colorScheme='teal' variant='link' fontSize='2xl' marginTop={5}>財布</Button>
+            </Link>
           </DrawerBody>
         </DrawerContent>
       </Drawer>
