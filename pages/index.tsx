@@ -1,11 +1,12 @@
 import React from 'react';
-import Login from './component/login';
+import Top from './Top'
+
 
 function Home() {
 
   return (
     <>
-      <Login />
+      <Top />
     </>
   );
 }
