@@ -15,7 +15,7 @@ const Top: NextPage = () => {
       
       <Center paddingTop={"130px"}  width="90%" margin={"0px auto"}>
       <Grid templateColumns='repeat(5, 1fr )' gap={8} >
-          {taskList.map((product:any, index: React.Key) => (
+          {taskList.map((product, index: React.Key) => (
             <Box key={index} paddingTop={"30px"} paddingBottom={"50px"}>
                 <GridItem>
                   <Link href={`/component/${product.id}`} >
