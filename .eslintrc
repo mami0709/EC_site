@@ -1,0 +1,4 @@
+{
+  // 追記：ESLint と Prettier のコード整形がバッティングしないようになります
+  "extends": ["next", "next/core-web-vitals", "prettier"]
+}
