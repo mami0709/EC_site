@@ -23,7 +23,7 @@ const Test: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
   const dispatch = useDispatch();
-  const taskList: any = ProductsData;
+  const taskList= ProductsData;
 
   //queryで取得したIDをもとにtaskListから呼び出し。resultに格納
   const result = taskList.find((task: any) => {
@@ -36,6 +36,7 @@ const Test: NextPage = () => {
     setCount(count - 1);
   };
 
+  
   return (
     <div>
       <Tab />
