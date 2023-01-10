@@ -6,9 +6,9 @@ import { Tab } from '../../layout/Tab';
 import type { NextPage } from 'next';
 
 const Saihu: NextPage = () => {
-  const taskList: any = ProductsData;
+  const taskList = ProductsData;
   //tagより任意のものを取り出す
-  const taskListRyukku = taskList.filter((task: any) => {
+  const taskListRyukku = taskList.filter((task) => {
     return task.tag == 'サイフ';
   });
 
@@ -18,7 +18,7 @@ const Saihu: NextPage = () => {
 
       <Center paddingTop={'130px'} width='90%' margin={'0px auto'}>
         <Grid templateColumns='repeat(5, 1fr )' gap={8}>
-          {taskListRyukku.map((product: any, index: React.Key) => (
+          {taskListRyukku.map((product, index: React.Key) => (
             <Box key={index} paddingTop={'30px'} paddingBottom={'50px'}>
               <GridItem>
                 <Link href={`/component/${product.id}`}>

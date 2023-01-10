@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import React from 'react';
 import { NextPage } from 'next';
 import { Tab } from '../../layout/Tab';
@@ -67,7 +68,7 @@ const inCart: NextPage = () => {
                   width='80%'
                   margin={'0px auto'}
                 >
-                  {cartList.map((cart: any, index: React.Key) => (
+                  {cartList.map((cart, index: React.Key) => (
                     <Box
                       key={index}
                       display={'flex'}

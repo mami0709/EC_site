@@ -6,7 +6,7 @@ import { Tab } from '../layout/Tab';
 import type { NextPage } from 'next';
 
 const Top: NextPage = () => {
-  const taskList: any = ProductsData;
+  const taskList = ProductsData;
 
   return (
     <>
